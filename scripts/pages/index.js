@@ -14,7 +14,7 @@ class Index extends React.Component {
   }
 
   componentWillMount() {
-    const categories = Memory.get('categories'); // Stored in memory (either server or local cache)
+    const categories = Memory.get('categories');
     if (categories) {
       this.setState({categories});
     } else {
@@ -26,10 +26,11 @@ class Index extends React.Component {
     }
   }
 
-  render(...args){
+  render(...args) {
     return view.apply(this, args);
   }
 
 };
 
 export default Index;
+

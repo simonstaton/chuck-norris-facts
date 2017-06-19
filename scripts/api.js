@@ -1,12 +1,6 @@
 import axios from 'axios';
 import Memory from './memory';
 
-// https://api.chucknorris.io/jokes/random
-// https://api.chucknorris.io/jokes/random?category=religion
-// https://api.chucknorris.io/jokes/categories
-// https://api.chucknorris.io/jokes/search?query={query} << the joke/or part of it
-
-// Abstraction layer
 class Api {
 
   static endpoint = 'https://api.chucknorris.io/jokes';
@@ -23,3 +17,5 @@ class Api {
 }
 
 export default Api;
+
+

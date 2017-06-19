@@ -7,7 +7,6 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer');
 
-// Sass bulid tasks
 gulp.task('sass', () => {
   gulp.src('./sass/**/*.scss')
     .pipe(sass())
@@ -16,7 +15,6 @@ gulp.task('sass', () => {
     .pipe(livereload());
 });
 
-// Js build tasks
 gulp.task('js', () => {
   return browserify()
     .transform("babelify", {
@@ -34,13 +32,11 @@ gulp.task('js', () => {
     .pipe(livereload());
 });
 
-// Dev build tasks + livereload
 gulp.task('watch', () => {
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch("./scripts/**/*.*", ['js']);
   livereload.listen();
 });
 
-// Tasks...
 gulp.task('release', ['sass', 'js']);
 gulp.task('default', ['watch', 'sass', 'js']);

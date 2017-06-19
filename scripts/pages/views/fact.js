@@ -11,7 +11,7 @@ export default function() {
         ]}
       />
       <p>{this.state.fact && this.state.fact.value}</p>
-      <button onClick={this.newFact.bind(this)} className="button button-primary">New Fact</button>
+      <button onClick={this.getFact.bind(this)} className="button button-primary">New Fact</button>
     </div>
   );
 };
